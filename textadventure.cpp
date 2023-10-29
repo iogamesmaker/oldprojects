@@ -95,4 +95,27 @@ int main() {
             respawn();
         }
         if (x == "vikings" && page == 150) {
-            printf("Charlemagne the Little quickly runs away, leaving you with the Vikings who beat you to death one by one. You pick up a bow from a Viking and use your arrow.\nA Viking runs after you. Do you hit him in the <throat> or try to hit
+            printf("Charlemagne the Little quickly runs away, leaving you with the Vikings who beat you to death one by one. You pick up a bow from a Viking and use your arrow.\nA Viking runs after you. Do you hit him in the <throat> or try to hit him on the <temple>?");
+            page = 151;
+    }
+    if (x == "temple" && page == 151) {
+        printf("You hit the Viking on his temple, and he faints.\nYou kill him and take a helmet from another Viking.\nHe tries to hit you.\nDo you defend yourself in your <stomach> or at your <head>.\n");
+        page = 152;
+    }
+    if (x == "throat" && page == 151) {
+        printf("He blocks your blow and strikes you once\nHe pricks your eyes before feasting on your entrails.");
+        respawn();
+    }
+    if (x == "stomach" && page == 152) {
+        printf("\n\nYou block his blow, cut off his arms, and stab him.\nHe's dead.\nCharlemagne the Little is now sitting alone on his bed crying.\n\"Don't hurt me!\"\n You're a nice guy, so you finish him off quickly.\nCharlemagne the Little is murdered, and therefore Lucas the Little is gone as well!\nA portal opens back to your home, where you are received as a hero!\nThe rest of your life is spent with a big stomach and a nice pension.");
+        page=-1;
+    }
+    if (x == "head" && page == 152) {
+        printf("He pricks you in the stomach, and you bleed to death.");
+        respawn();
+    }
+    if (x == "x") {
+        printf("%.0f", page);
+    }
+}
+}
